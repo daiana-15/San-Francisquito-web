@@ -4,26 +4,53 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>San Francisquito</title>
+    <title>E.E.T.P.P.I N° 2076 - San Francisquito</title>
+
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" type="image/x-icon" href="Imagenes/logonegro2circulo.png" />
 </head>
 
 <body>
 
+    <!-- Top Bar Institucional -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-info">
+                <span>📍 Rosario, Santa Fe</span>
+                <span class="sep">•</span>
+                <span>📞 (0341) 456-7890</span>
+                <span class="sep">•</span>
+                
+                <span>✉️ eetppi2076@sanfrancisquito.edu.ar</span>
+            </div>
+            <div class="top-badge">
+                <span>Educación Técnica Oficial</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación Principal -->
     <header class="navbar">
         <div class="header-container">
-            <div class="icono">
-                <img src="Imagenes/logonegro2circulo.png" id="logo-negro" class="logo" alt="Logo Negro">
-                <img src="Imagenes/Nuevo logo.png" id="logo-blanco" class="logo" alt="Logo Blanco" />
-            </div>
+            <a href="index.html" class="brand-link" aria-label="Ir al inicio">
+                <div class="icono">
+                    <img src="Imagenes/logonegro2circulo.png" id="logo-negro" class="logo" alt="Logo Negro">
+                    <img src="Imagenes/Nuevo logo.png" id="logo-blanco" class="logo" alt="Logo Blanco" />
+                </div>
 
-            <div class="nav-text">
-                E.E.T.P.P.I N° 2076<br />
-                "San Francisquito"
-            </div>
+                <div class="nav-text">
+                    <span class="sub-school">E.E.T.P.P.I N° 2076</span>
+                    <span class="main-school">"San Francisquito"</span>
+                </div>
+            </a>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,126 +58,146 @@
 
             <nav class="nav" id="nav-menu">
                 <ul class="lista-nav">
-                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="index.html" class="active">INICIO</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="Modalidad.html">MODALIDAD</a></li>
-                    <li><a href="Secretaria.html">SECRETARIA</a></li>
-                    <li><a href="">PROYECTOS</a></li>
-                    
+                    <li><a href="secretaria.html">SECRETARIA</a></li>
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero / Portada -->
     <section class="contenedor-foto">
-        <img src="Imagenes/portada.jpeg" alt="Portada">
+        <div class="hero-overlay"></div>
+        <img src="Imagenes/portada.jpeg" alt="Portada Escuela San Francisquito">
         <div class="texto">
-            <h2>ESCUELA TÉCNICA PROFESIONAL INCORPORADA</h2>
-            <h3>"San Francisquito" 2076</h3>
+            <span class="badge-hero">Formación Profesional e Innovación</span>
+            <h2>Escuela Técnica Profesional Incorporada</h2>
+            <h3>"San Francisquito" N° 2076</h3>
         </div>
     </section>
 
-<main class="cards-section">
-    <!-- Se agrega la clase fade-in-card -->
-    <section class="card-container card1 fade-in-card">
-        <div class="card-content">
-            <h2 class="card-title">FORJANDO EL FUTURO A TRÁVES DE LA TECNOLOGÍA</h2>
-
-            <p class="card-text">
-                En la secundaria San Francisquito entendemos que el futuro no se espera, se construye. Somos una
-                institución educativa de gestión semiprivada con más de 16 años de trayectoria, dedicada a la formación
-                de jóvenes profesionales en las áreas de la tecnología. Nuestro objetivo fundamental es brindar una
-                educación integral que combine una rigurosa excelencia académica con una sólida formación práctica en
-                talleres.
-            </p>
-
-            <p class="card-text">
-                Creemos firmemente en el valor del "saber hacer". Por eso, nuestro modelo pedagógico transforma las
-                aulas tradicionales en espacios de experimentación activa. Intentamos que los estudiantes no solo
-                absorban conceptos teóricos, sino que los pongan a prueba diseñando prototipos, programando y
-                resolviendo problemáticas reales del entorno socioproductivo actual. Preparemos a nuestros alumnos tanto
-                para una inserción laboral inmediata y calificada, como para continuar con éxito sus estudios
-                superiores.
-            </p>
-        </div>
-
-        <div class="card-image-wrapper">
-            <img src="Imagenes/sala-16.jpg" alt="Aula de computación" class="card-image" />
+    <!-- Métricas Institucionales -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-card">
+                <span class="stat-number">+16</span>
+                <span class="stat-label">Años de Trayectoria</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Orientación Técnica</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">+200</span>
+                <span class="stat-label">Alumnos Activos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">Técnico</span>
+                <span class="stat-label">Título Profesional</span>
+            </div>
         </div>
     </section>
 
-    <!-- Se agrega la clase fade-in-card -->
-    <section class="card-container card2 fade-in-card">
-        <div class="card-image-wrapper">
-            <img src="Imagenes/afuera.jpg" alt="Fachada San Francisquito" class="card-image" />
-        </div>
+    <!-- Sección Principal de Tarjetas -->
+    <main class="cards-section">
+        <!-- Card 1 -->
+        <section class="card-container card1 fade-in-card">
+            <div class="card-content">
+                <h2 class="card-title">FORJANDO EL FUTURO A TRAVÉS DE LA TECNOLOGÍA</h2>
 
-        <div class="card-content">
-            <h2 class="card-title">FORMANDO LOS LÍDERES TECNOLÓGICOS DEL FUTURO</h2>
+                <p class="card-text">
+                    En la secundaria San Francisquito entendemos que el futuro no se espera, se construye. Somos una
+                    institución educativa de gestión semiprivada con más de 16 años de trayectoria, dedicada a la
+                    formación
+                    de jóvenes profesionales en las áreas de la tecnología. Nuestro objetivo fundamental es brindar una
+                    educación integral que combine una rigurosa excelencia académica con una sólida formación práctica
+                    en
+                    talleres.
+                </p>
 
-            <p class="card-text">
-                Elegir nuestra escuela técnica es apostar por una educación de vanguardia enfocada en el fascinante
-                mundo de la Informática. Aquí, los estudiantes transforman su pasión por la tecnología en habilidades
-                concretas como reparación de hardware y software, mantenimiento de redes, robótica, impresión 3D y más.
-            </p>
+                <p class="card-text">
+                    Creemos firmemente en el valor del "saber hacer". Por eso, nuestro modelo pedagógico transforma las
+                    aulas tradicionales en espacios de experimentación activa. Intentamos que los estudiantes no solo
+                    absorban conceptos teóricos, sino que los pongan a prueba diseñando prototipos, programando y
+                    resolviendo problemáticas reales del entorno socioproductivo actual. Preparamos a nuestros alumnos
+                    tanto
+                    para una inserción laboral inmediata y calificada, como para continuar con éxito sus estudios
+                    superiores.
+                </p>
+            </div>
 
-            <p class="card-text">
-                Entendemos que la educación técnica requiere práctica, creatividad y constancia. Por eso, invitamos a
-                las familias y a los futuros estudiantes a explorar nuestro sitio web, recorrer de manera presencial
-                nuestras instalaciones y descubrir los proyectos anuales en nuestra tradicional "Muestra de talentos".
-                Sumarse a nuestra comunidad educativa es integrarse a un entorno dinámico que impulsa el pensamiento
-                computacional, el trabajo en equipo, la cultura del esfuerzo y el desarrollo tecnológico de nuestra
-                región.
-            </p>
-        </div>
-    </section>
-</main>
+            <div class="card-image-wrapper">
+                <img src="Imagenes/sala-16.jpg" alt="Aula de computación" class="card-image" />
+            </div>
+        </section>
 
-    <!--
-    <figure class="contenido">
-        <img src="Imagenes/sala16-record.png" alt="Imagen de la sala de computación">
-        <figcaption class="texto-principal">
-            <h3>FORJANDO EL FUTURO A TRÁVES DE LA TECNOLOGÍA</h3>
-            <p>En la secundaria San Francisquito entendemos que el futuro no se espera, se construye. Somos una
-                institución educativa de gestión semiprivada con más de 16 años de trayectoria, dedicada a la formación
-                de jóvenes
-                profesionales en las áreas de la tecnología. Nuestro objetivo fundamental es brindar una educación
-                integral que combine una rigurosa excelencia académica con una sólida formación práctica en talleres.
-            </p>
-            <p>Creemos firmemente en el valor del "saber hacer". Por eso, nuestro modelo pedagógico transforma las aulas
-                tradicionales en espacios de experimentación activa. Intentamos que los estudiantes no solo absorban
-                conceptos teóricos, sino que los pongan a prueba diseñando prototipos, programando y resolviendo
-                problemáticas
-                reales del entorno socioproductivo actual. Preparemos a nuestros alumnos tanto para una inserción
-                laboral inmediata y
-                calificada, como para continuar con éxito sus estudios superiores.
-            </p>
-        </figcaption>
-    </figure>
--->
+        <!-- Card 2 -->
+        <section class="card-container card2 fade-in-card">
+            <div class="card-image-wrapper">
+                <img src="Imagenes/afuera.jpg" alt="Fachada San Francisquito" class="card-image" />
+            </div>
 
-    <!--
-    <figure class="contenido-formacion">
-        <img src="Imagenes/afuera.jpg" alt="Imagen del frente de la institucion">
-        <figcaption class="texto-lider">
-            <h3>FORMANDO LOS LÍDERES TECNOLÓGICOS DEL FUTURO</h3>
-            <p>Elegir nuestra escuela técnica es apostar por una educación de vanguardia enfocada en el fascinante mundo
-                de la Informática. Aquí, los estudiantes transforman su pasión por la tecnología en habilidades
-                concretas como
-                reparación de hardware y software, mantenimiento de redes, robótica, impresión 3D y más.</p>
-            <p>Entendemos que la educación técnica requiere práctica, creatividad y constancia. Por eso, invitamos a las
-                familias y a los futuros estudiantes a explorar nuestro sitio web, recorrer de manera presencial
-                nuestras instalaciones y descubrir los proyectos anuales en nuestra tradicional "Muestra de talentos".
-                <br>
-                Sumarse a nuestra comunidad educativa es integrarse a un entorno dinámico que impulsa el pensamiento
-                computacional, el trabajo en equipo, la cultura del esfuerzo y el desarrollo tecnológico de nuestra
-                región.
-            </p>
-        </figcaption>
-    </figure>
--->
+            <div class="card-content">
+                <h2 class="card-title">FORMANDO LOS LÍDERES TECNOLÓGICOS DEL FUTURO</h2>
+
+                <p class="card-text">
+                    Elegir nuestra escuela técnica es apostar por una educación de vanguardia enfocada en el fascinante
+                    mundo de la Informática. Aquí, los estudiantes transforman su pasión por la tecnología en
+                    habilidades
+                    concretas como reparación de hardware y software, mantenimiento de redes, robótica, impresión 3D y
+                    más.
+                </p>
+
+                <p class="card-text">
+                    Entendemos que la educación técnica requiere práctica, creatividad y constancia. Por eso, invitamos
+                    a
+                    las familias y a los futuros estudiantes a explorar nuestro sitio web, recorrer de manera presencial
+                    nuestras instalaciones y descubrir los proyectos anuales en nuestra tradicional "Muestra de
+                    talentos".
+                </p>
+
+                <p class="card-text highlight-text">
+                    Sumarse a nuestra comunidad educativa es integrarse a un entorno dinámico que impulsa el pensamiento
+                    computacional, el trabajo en equipo, la cultura del esfuerzo y el desarrollo tecnológico de nuestra
+                    región.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Institucional -->
     <footer class="footer">
-        <p>&copy; 2026 Escuela Técnica Profesional Incorporada. Todos los derechos reservados.</p>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>E.E.T.P.P.I N° 2076</h4>
+                    <p>"San Francisquito"</p>
+                    <p class="footer-subtext">Formación técnica profesional con compromiso social y desarrollo de futuro
+                        para nuestros jóvenes.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nuestra Historia</a></li>
+                        <li><a href="Modalidad.html">Modalidad Técnica</a></li>
+                        <li><a href="secretaria.html">Secretaría y Trámites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Secretaría</h4>
+                    <p> Atencion Presencial y Virtual</p>
+                    <p>Lunes, Miércoles y Viernes</p>
+                    <p>8:00 a 12:00 hs | 13:30 a 16:00 hs</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Escuela Técnica Profesional Incorporada. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="index.js"></script>

@@ -1,7 +1,5 @@
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header.navbar');
-
-    // Activa el cambio de color tras bajar 20px
     if (window.scrollY > 20) {
         header.classList.add('scrolled');
     } else {
@@ -9,35 +7,36 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Desplegable del menú hamburguesa en dispositivos móviles
 document.addEventListener('DOMContentLoaded', function () {
+    // Menu Hamburguesa Móvil
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('nav-active');
+            const isActive = navMenu.classList.toggle('nav-active');
+            menuToggle.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isActive);
         });
     }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".fade-in-card");
+    // Intersection Observer para Animaciones de Scroll
+    const animatedCards = document.querySelectorAll(".fade-in-card");
 
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2 // Se activa cuando el 20% de la tarjeta ingresa en pantalla
-  };
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.15
+    };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // Detiene la observación una vez mostrada
-      }
-    });
-  }, observerOptions);
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
 
-  cards.forEach(card => observer.observe(card));
+    animatedCards.forEach(card => observer.observe(card));
 });

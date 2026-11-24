@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>San Francisquito</title>
+    <title>Nuestra Historia - San Francisquito</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="nosotros.css" />
     <link rel="icon" type="image/x-icon" href="Imagenes/logonegro2circulo.png" />
 </head>
@@ -13,15 +19,17 @@
 
     <header class="navbar">
         <div class="header-container">
-            <div class="icono">
-                <img src="Imagenes/logonegro2circulo.png" id="logo-negro" class="logo" alt="Logo Negro">
-                <img src="Imagenes/Nuevo logo.png" id="logo-blanco" class="logo" alt="Logo Blanco" />
-            </div>
+            <a href="index.html" class="brand-link">
+                <div class="icono">
+                    <img src="Imagenes/logonegro2circulo.png" id="logo-negro" class="logo" alt="Logo Negro">
+                    <img src="Imagenes/Nuevo logo.png" id="logo-blanco" class="logo" alt="Logo Blanco" />
+                </div>
 
-            <div class="nav-text">
-                E.E.T.P.P.I N° 2076<br />
-                "San Francisquito"
-            </div>
+                <div class="nav-text">
+                    <span class="sub-school">E.E.T.P.P.I N° 2076</span>
+                    <span class="main-school">"San Francisquito"</span>
+                </div>
+            </a>
 
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
                 <span></span>
@@ -32,21 +40,29 @@
             <nav class="nav" id="nav-menu">
                 <ul class="lista-nav">
                     <li><a href="index.html">INICIO</a></li>
-                    <li><a href="">NOSOTROS</a></li>
+                    <li><a href="nosotros.html" class="active">NOSOTROS</a></li>
                     <li><a href="Modalidad.html">MODALIDAD</a></li>
                     <li><a href="secretaria.html">SECRETARIA</a></li>
-                    <li><a href="">PROYECTOS</a></li>
-                    
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    
+    <section class="contenedor-foto">
+        <div class="hero-overlay"></div>
+        <img src="Imagenes/portada.jpeg" alt="Portada San Francisquito">
+        <div class="texto">
+            <span class="badge-hero">Nuestra Trayectoria</span>
+            <h2>NUESTRA HISTORIA</h2>
+            <h3>Raíces, Crecimiento y Futuro Tecnológico</h3>
+        </div>
+    </section>
+
     <main class="timeline-container-main">
-        <!-- Encabezado e Introducción -->
+        <!-- Encabezado de la Historia -->
         <section class="timeline-intro fade-in-card">
-            <h1 class="timeline-main-title">Nuestra Historia</h1>
+            <h1 class="timeline-main-title">Un Sueño Hecho Comunidad</h1>
             <p class="intro-p">
                 La Escuela de Educación Técnica Nº 2076 "San Francisquito" nació como respuesta a un anhelo profundo de
                 nuestra comunidad: brindar continuidad pedagógica y contención a los jóvenes del barrio para que
@@ -55,7 +71,7 @@
             </p>
         </section>
 
-        <!-- Línea de Tiempo Vertical -->
+        <!-- Línea del Tiempo -->
         <section class="timeline">
             <!-- 2006 -->
             <div class="timeline-item left">
@@ -137,7 +153,7 @@
             </div>
         </section>
 
-        <!-- Sección Cierre: Nuestro Presente -->
+        <!-- Presente -->
         <section class="timeline-present fade-in-card">
             <h2>Nuestro Presente — Creciendo en Conocimiento y Familia</h2>
             <p>
@@ -155,15 +171,35 @@
         </section>
     </main>
 
-
-
-
-
-
-
-
     <footer class="footer">
-        <p>&copy; 2026 Escuela Técnica Profesional Incorporada. Todos los derechos reservados.</p>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>E.E.T.P.P.I N° 2076</h4>
+                    <p>"San Francisquito"</p>
+                    <p class="footer-subtext">Formación técnica profesional con compromiso social y desarrollo de futuro
+                        para nuestros jóvenes.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nuestra Historia</a></li>
+                        <li><a href="Modalidad.html">Modalidad Técnica</a></li>
+                        <li><a href="secretaria.html">Secretaría y Trámites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Secretaría</h4>
+                    <p> Atencion Presencial y Virtual</p>
+                    <p>Lunes, Miércoles y Viernes</p>
+                    <p>8:00 a 12:00 hs | 13:30 a 16:00 hs</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Escuela Técnica Profesional Incorporada. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="nosotros.js"></script>
