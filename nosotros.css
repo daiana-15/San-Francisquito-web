@@ -50,6 +50,42 @@
     margin-bottom: 14px;
 }
 
+/* --- TOP BAR --- */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.82rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.top-info .sep {
+    opacity: 0.4;
+}
+
+.top-badge span {
+    background-color: rgba(78, 189, 223, 0.2);
+    color: var(--accent-blue);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
 /* Eje Vertical */
 .timeline {
     position: relative;
